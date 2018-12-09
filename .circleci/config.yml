@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
     # specify the version you desire here
-    - image: circleci/node:7.10
+    - image: circleci/node:8.12.0
 
     environment:
       NPM_TOKEN: "F0F54FC9-B6E7-499F-B0A6-0DCE3F141661"
