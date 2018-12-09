@@ -20,7 +20,7 @@ import ClippPlayer from 'clipp-player'
 class Example extends React.Component {
   render () {
     return (
-      <ClippPlayer />
+      <ClippPlayer src="http://AudioFile.mp3" />
     )
   }
 }

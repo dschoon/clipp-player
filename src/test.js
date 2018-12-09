@@ -1,7 +1,9 @@
-import ExampleComponent from './'
+import ClippPlayer from './'
 
-describe('ExampleComponent', () => {
-  it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+/* global describe it expect */
+
+describe('ClippPlayer', () => {
+  it('does exist', () => {
+    expect(ClippPlayer).toBeTruthy()
+  });
+});

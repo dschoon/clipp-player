@@ -11,10 +11,6 @@ export default class ClippPlayer extends React.Component {
   };
 
   render() {
-    const {
-      text
-    } = this.props;
-
     return (
       <div className={styles.clippPlayer}>
         <ClippWidget src={this.props.src} />
