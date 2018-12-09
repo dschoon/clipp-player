@@ -41,3 +41,7 @@ jobs:
 
       # run tests!
       - run: yarn test
+
+      - run: yarn predeploy
+
+      - run: yarn deploy
