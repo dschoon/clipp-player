@@ -9,6 +9,9 @@ jobs:
     # specify the version you desire here
     - image: circleci/node:7.10
 
+    environment:
+      NPM_TOKEN: F0F54FC9-B6E7-499F-B0A6-0DCE3F141661
+
     # Specify service dependencies here if necessary
     # CircleCI maintains a library of pre-built images
     # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -17,7 +20,10 @@ jobs:
     working_directory: ~/dschoon/clipp-player
 
     steps:
-    - checkout
+      - checkout
+      - run:
+          name: Copy npmrc over
+          command: cp ./npmrc ~/.npmrc
 
     # Download and cache dependencies
     - restore_cache:
