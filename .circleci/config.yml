@@ -9,8 +9,9 @@ jobs:
     # specify the version you desire here
     - image: circleci/node:8.12.0
 
-    environment:
-      NPM_TOKEN: "F0F54FC9-B6E7-499F-B0A6-0DCE3F141661"
+    branches:
+      ignore:
+        - gh-pages
 
     # Specify service dependencies here if necessary
     # CircleCI maintains a library of pre-built images
@@ -23,6 +24,10 @@ jobs:
       - checkout
       - run:
           name: Copy npmrc over
+          command: cp ./npmrc ~/.npmrc
+
+      - run:
+          name: Setup github user
           command: cp ./npmrc ~/.npmrc
 
       # Download and cache dependencies
@@ -44,4 +49,12 @@ jobs:
 
       - run: yarn predeploy
 
-      - run: yarn deploy
+      - deploy:
+          name: Deploy to github pages
+          command: |
+            if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
+              git config --global user.email $GH_EMAIL
+              git config --global user.name $GH_NAME
+
+              yarn deploy
+            fi
