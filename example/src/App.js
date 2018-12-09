@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-
-import ExampleComponent from 'clipp-player'
+import ClippPlayer from 'clipp-player'
+import freestyle from './audio/freestyle.mp3';
+import killshot from './audio/killshot.mp3';
 
 export default class App extends Component {
   render () {
     return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
+      <div className={'container'}>
+        <ClippPlayer src={killshot} />
       </div>
     )
   }

@@ -1,22 +1,28 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+import ClippWidget from './Components/ClippWidget/ClippWidget';
 
-import styles from './styles.css'
+import styles from './styles.scss';
 
-export default class ExampleComponent extends Component {
+
+export default class ClippPlayer extends React.Component {
   static propTypes = {
-    text: PropTypes.string
-  }
+    src: PropTypes.string
+  };
 
   render() {
     const {
       text
-    } = this.props
+    } = this.props;
 
     return (
-      <div className={styles.test}>
-        Example Component: {text}
+      <div className={styles.clippPlayer}>
+        <ClippWidget src={this.props.src} />
       </div>
     )
   }
 }
+
+ClippPlayer.defaultProps = {
+  src: ""
+};

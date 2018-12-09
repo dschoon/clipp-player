@@ -1,4 +1,4 @@
-# clipp-player
+# ClippPlayer
 
 > coming soon
 
@@ -13,14 +13,14 @@ npm install --save clipp-player
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'clipp-player'
+import ClippPlayer from 'clipp-player'
 
-class Example extends Component {
+class Example extends React.Component {
   render () {
     return (
-      <MyComponent />
+      <ClippPlayer />
     )
   }
 }
