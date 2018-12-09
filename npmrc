@@ -1,2 +1,4 @@
+//registry.npmjs.org/:_authToken=f21381942e3f16cd2ea8704ad8340bee73fff73e
+@dschoon:registry=https://registry.npmjs.org/
 //npm.fontawesome.com/:_authToken=${NPM_TOKEN}
 @fortawesome:registry=https://npm.fontawesome.com/
