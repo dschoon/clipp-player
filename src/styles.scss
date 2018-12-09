@@ -2,12 +2,16 @@
 
 .clippPlayer {
   font-family: 'Roboto Condensed', sans-serif;
-  width: 93%;
+  width: 85%;
   display: inline-block;
   text-align: center;
   margin: 2em auto;
-  padding: 0 0 0 40px;
-  font-size: 2em;
+  padding: 4px 15px 0 40px;
+
+  .inner {
+    display: inline-block;
+    width: 88%;
+  }
 
   .button {
     display: inline-block;
@@ -16,8 +20,9 @@
     background: #FDBB2D;
     border: 1px solid #FFF;
     border-radius: 30px;
-    margin: -5px 0 0 -65px;
+    margin: -5px 0 0 -40px;
     padding: 10px 15px;
+    font-size: 2em;
 
     .play {
       margin: 0 -4px 0 4px;
@@ -26,9 +31,14 @@
 
   .counter {
     display: inline-block;
+    width: 5%;
     float: right;
     font-size: 28px;
-    width: 40px;
-    margin: -42px -40px 0 0;
+    margin: 8px 8px 0 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }

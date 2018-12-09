@@ -46,11 +46,13 @@ export default class ClippWidget extends React.Component {
             <FontAwesomeIcon icon={faPlay} className={ styles.play } />
           }
         </div>
-        <Waveform src={this.props.src}
-                  time={this.state.time}
-                  isPlaying={this.state.isPlaying}
-                  toggleCallback={this.togglePlay}
-                  timerCallback={this.updateTimer} />
+        <div className={styles.inner}>
+          <Waveform src={this.props.src}
+                    time={this.state.time}
+                    isPlaying={this.state.isPlaying}
+                    toggleCallback={this.togglePlay}
+                    timerCallback={this.updateTimer} />
+        </div>
         <div className={ styles.counter }>
           { this.renderCounter() }
         </div>

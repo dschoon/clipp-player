@@ -1,8 +1,11 @@
 # ClippPlayer
 
-> coming soon
+An audio player widget with a waveform 
 
-[![NPM](https://img.shields.io/npm/v/clipp-player.svg)](https://www.npmjs.com/package/clipp-player) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/clipp-player.svg)](https://www.npmjs.com/package/clipp-player) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![CircleCI](https://circleci.com/gh/dschoon/clipp-player.svg?style=svg)](https://circleci.com/gh/dschoon/clipp-player)
+
+
+![ClippPlayer](example/public/ClippPlayer.jpg)
 
 ## Install
 
@@ -16,11 +19,12 @@ npm install --save clipp-player
 import React from 'react'
 
 import ClippPlayer from 'clipp-player'
+import mySong from './audio/mySong.mp3';
 
-class Example extends React.Component {
+class App extends React.Component {
   render () {
     return (
-      <ClippPlayer src="http://AudioFile.mp3" />
+      <ClippPlayer src="{mySong}" />
     )
   }
 }
@@ -28,4 +32,4 @@ class Example extends React.Component {
 
 ## License
 
-MIT © [dschoon](https://github.com/dschoon)
+MIT © [Dan Schoonmaker](https://github.com/dschoon)
