@@ -1,14 +1,29 @@
 {
   "name": "clipp-player",
   "version": "1.0.1",
-  "description": "coming soon",
+  "description": "Audio player component",
   "author": "dschoon",
   "license": "MIT",
-  "repository": "dschoon/clipp-player",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dschoon/clipp-player"
+  },
+  "bugs": {
+    "url": "https://github.com/dschoon/clipp-player/issues"
+  },
   "homepage": "https://dschoon.github.io/clipp-player",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
+  "keywords": [
+    "react",
+    "reactjs",
+    "wavesurfer",
+    "audio",
+    "audio player",
+    "react-component",
+    "component"
+  ],
   "engines": {
     "node": ">=8",
     "npm": ">=5"

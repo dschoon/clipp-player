@@ -7,7 +7,7 @@ An audio player widget with a waveform
 
 ![ClippPlayer](example/public/ClippPlayer.jpg)
 
-#####Demo: https://dschoon.github.io/clipp-player/
+**Demo:** https://dschoon.github.io/clipp-player/
 
 
 ## Install
