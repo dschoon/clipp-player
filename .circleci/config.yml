@@ -21,9 +21,6 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          name: Copy npmrc over
-          command: cp ./npmrc ~/.npmrc
 
       # Download and cache dependencies
       - restore_cache:
