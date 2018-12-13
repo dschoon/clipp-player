@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause } from '@fortawesome/pro-light-svg-icons';
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 import styles from '../../styles.scss';
 import Waveform from "../Waveform/Waveform";

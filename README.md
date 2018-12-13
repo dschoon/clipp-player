@@ -7,6 +7,9 @@ An audio player widget with a waveform
 
 ![ClippPlayer](example/public/ClippPlayer.jpg)
 
+#####Demo: https://dschoon.github.io/clipp-player/
+
+
 ## Install
 
 ```bash
@@ -32,4 +35,4 @@ class App extends React.Component {
 
 ## License
 
-MIT © [Dan Schoonmaker](https://github.com/dschoon)
+MIT © [Dan Schoonmaker](https://danielschoonmaker.com) [(github)](https://github.com/dschoon)
