@@ -652,6 +652,12 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@dschoon/react-waves@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@dschoon/react-waves/-/react-waves-1.0.1.tgz#7878640e33806683c6e16792a79e932b356379f1"
+  dependencies:
+    wavesurfer.js "^2.1.1"
+
 "@fortawesome/fontawesome-common-types@^0.2.10":
   version "0.2.10"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.10.tgz#ae0e6858daf6f9ff1e2396f9fbea87b244628343"
