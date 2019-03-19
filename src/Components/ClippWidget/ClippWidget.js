@@ -1,11 +1,11 @@
 import React from 'react';
 import moment from 'moment';
+import ReactWaves from '@dschoon/react-waves';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 import styles from '../../styles.scss';
-import Waveform from "../Waveform/Waveform";
 
 
 export default class ClippWidget extends React.Component {
@@ -47,11 +47,23 @@ export default class ClippWidget extends React.Component {
           }
         </div>
         <div className={styles.inner}>
-          <Waveform src={this.props.src}
-                    time={this.state.time}
-                    isPlaying={this.state.isPlaying}
-                    toggleCallback={this.togglePlay}
-                    timerCallback={this.updateTimer} />
+          <ReactWaves
+            audioFile={this.props.src}
+            className={styles.wave}
+            options={{
+              barWidth: 2,
+              cursorWidth: 0,
+              height: 50,
+              hideScrollbar: true,
+              progressColor: '#44BDB2',
+              responsive: true,
+              waveColor: '#D1D6DA'
+            }}
+            volume={1}
+            zoom={1}
+            playing={this.state.isPlaying}
+            onPosChange={this.updateTimer}
+          />
         </div>
         <div className={ styles.counter }>
           { this.renderCounter() }
