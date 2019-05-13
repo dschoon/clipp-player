@@ -13,12 +13,8 @@ export default class ClippPlayer extends React.Component {
   render() {
     return (
       <div className={styles.clippPlayer}>
-        <ClippWidget src={this.props.src} />
+        <ClippWidget {...this.props} />
       </div>
     )
   }
 }
-
-ClippPlayer.defaultProps = {
-  src: ""
-};

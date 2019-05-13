@@ -2,7 +2,7 @@
 
 .clippPlayer {
   font-family: 'Roboto Condensed', sans-serif;
-  width: 85%;
+  width: 100%;
   display: inline-block;
   text-align: center;
   margin: 2em auto;
@@ -20,12 +20,12 @@
     background: #FDBB2D;
     border: 1px solid #FFF;
     border-radius: 30px;
-    margin: -5px 0 0 -40px;
-    padding: 10px 15px;
-    font-size: 2em;
+    margin: -3px 0 0 -40px;
+    padding: 17px 20px;
+    font-size: 21px;
 
     .play {
-      margin: 0 -4px 0 4px;
+      margin: 0 -3px 0 3px;
     }
   }
 
@@ -40,7 +40,7 @@
     width: 5%;
     float: right;
     font-size: 28px;
-    margin: 8px 8px 0 0;
+    margin: 9px 8px 0 0;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
