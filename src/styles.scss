@@ -11,21 +11,27 @@
   .inner {
     display: inline-block;
     width: 88%;
+    margin-top: -25px;
   }
 
   .button {
     display: inline-block;
     float: left;
     color: #FFF;
-    background: #FDBB2D;
+    background: rgb(129, 116, 239);
     border: 1px solid #FFF;
     border-radius: 30px;
     margin: -3px 0 0 -40px;
     padding: 17px 20px;
     font-size: 21px;
+    cursor: pointer;
 
     .play {
       margin: 0 -3px 0 3px;
+    }
+
+    &:hover {
+      background: rgba(129, 116, 239, .85) !important;
     }
   }
 

@@ -11,7 +11,7 @@ export default class App extends React.Component {
           src={playinwitme}
           btnStyle={{
             color: '#FFF',
-            background: '#49368B',
+            background: 'rgb(129, 116, 239)',
             border: '0px solid #FFF',
             borderRadius: '30px',
           }}
@@ -19,22 +19,23 @@ export default class App extends React.Component {
             width: '3%',
             fontSize: '28px',
             margin: '8px 8px 0 0',
-            color: '#49368B',
+            color: 'rgb(129, 116, 239)',
           }}
           volume={1}
           zoom={1}
           options={{
             audioRate: 1,
-            autoCenter: false,
+            autoCenter: true,
             barGap: 1,
+            barWidth: 3,
             cursorColor: '#FFF',
             cursorWidth: 1,
             fillParent: true,
-            height: 50,
-            hideScrollbar: true,
+            height: 100,
+            hideScrollbar: false,
             normalize: true,
             partialRender: true,
-            progressColor: '#49368B',
+            progressColor: 'rgb(129, 116, 239)',
             responsive: true,
             waveColor: '#e1e5ea',
           }}

@@ -42,7 +42,7 @@ export default class ClippWidget extends React.Component {
     const currentTime = moment.duration(timeRemaining, 'seconds');
     const time = moment(currentTime.asMilliseconds()).utc();
 
-    if (this.state.duration > 3600) {
+    if (this.state.duration > 3600 && currentTime.asSeconds() > 3600) {
       return time.format('h:mm:ss');
     }
 
@@ -148,18 +148,18 @@ ClippWidget.defaultProps = {
   zoom: 1,
   options: {
     audioRate: 1,
-    autoCenter: false,
+    autoCenter: true,
     barGap: 1,
-    barWidth: 1.2,
+    barWidth: 3,
     cursorColor: '#FFF',
-    cursorWidth: 0,
+    cursorWidth: 1,
     fillParent: true,
-    height: 50,
-    hideScrollbar: true,
+    height: 100,
+    hideScrollbar: false,
     normalize: true,
     partialRender: true,
-    progressColor: '#1992BB',
+    progressColor: '#49368B',
     responsive: true,
-    waveColor: '#D1D6DA',
+    waveColor: '#e1e5ea',
   }
 };
