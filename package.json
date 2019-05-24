@@ -1,6 +1,6 @@
 {
   "name": "clipp-player",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Audio player component",
   "author": "dschoon",
   "license": "MIT",
@@ -76,7 +76,7 @@
     "dist"
   ],
   "dependencies": {
-    "@dschoon/react-waves": "^1.0.10",
+    "@dschoon/react-waves": "^1.0.14",
     "@fortawesome/fontawesome-svg-core": "^1.2.10",
     "@fortawesome/free-solid-svg-icons": "^5.6.1",
     "@fortawesome/react-fontawesome": "^0.1.3",

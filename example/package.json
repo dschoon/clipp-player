@@ -1,7 +1,7 @@
 {
   "name": "clipp-player-example",
   "homepage": "https://dschoon.github.io/clipp-player",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "license": "MIT",
   "private": true,
   "dependencies": {

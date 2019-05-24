@@ -16,7 +16,7 @@ export default class ClippWidget extends React.Component {
     this.state = {
       isPlaying: false,
       time: 0,
-      duration: 0,
+      duration: this.props.initialDuration || 0,
     };
   }
 
@@ -50,23 +50,7 @@ export default class ClippWidget extends React.Component {
   };
 
   render() {
-    const { src, volume, zoom, options, btnStyle, counterStyle } = this.props;
-    const {
-      audioRate,
-      autoCenter,
-      barGap,
-      barWidth,
-      cursorColor,
-      cursorWidth,
-      fillParent,
-      height,
-      hideScrollbar,
-      normalize,
-      partialRender,
-      progressColor,
-      responsive,
-      waveColor
-    } = options;
+    const { src, audioPeaks, volume, zoom, options, btnStyle, counterStyle } = this.props;
 
     return (
       <div>
@@ -79,22 +63,25 @@ export default class ClippWidget extends React.Component {
         <div className={styles.inner}>
           <ReactWaves
             audioFile={src}
+            audioPeaks={audioPeaks}
             className={styles.wave}
             options={{
-              audioRate: audioRate,
-              autoCenter: autoCenter,
-              barGap: barGap,
-              barWidth: barWidth,
-              cursorColor: cursorColor,
-              cursorWidth: cursorWidth,
-              fillParent: fillParent,
-              height: height,
-              hideScrollbar: hideScrollbar,
-              normalize: normalize,
-              partialRender: partialRender,
-              progressColor: progressColor,
-              responsive: responsive,
-              waveColor: waveColor
+              audioRate: options.audioRate,
+              autoCenter: options.autoCenter,
+              backend: audioPeaks ? 'MediaElement' : 'WebAudio',
+              barGap: options.barGap,
+              barWidth: options.barWidth,
+              barHeight: options.barHeight,
+              cursorColor: options.cursorColor,
+              cursorWidth: options.cursorWidth,
+              fillParent: options.fillParent,
+              height: options.height,
+              hideScrollbar: options.hideScrollbar,
+              normalize: options.normalize,
+              partialRender: options.partialRender,
+              progressColor: options.progressColor,
+              responsive: options.responsive,
+              waveColor: options.waveColor
             }}
             volume={volume}
             zoom={zoom}
@@ -113,6 +100,7 @@ export default class ClippWidget extends React.Component {
 ClippWidget.propTypes = {
   className: PropTypes.string,
   src: PropTypes.string,
+  audioPeaks: PropTypes.array,
   countStyle: PropTypes.oneOf(['DOWN', 'UP']),
   btnStyle: PropTypes.shape({
     color: PropTypes.string,
@@ -146,11 +134,14 @@ ClippWidget.defaultProps = {
   },
   volume: 1,
   zoom: 1,
+  initialDuration: 0,   // In seconds
   options: {
     audioRate: 1,
     autoCenter: true,
+    backend: '',
     barGap: 1,
     barWidth: 3,
+    barHeight: 5,
     cursorColor: '#FFF',
     cursorWidth: 1,
     fillParent: true,

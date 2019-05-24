@@ -9,6 +9,7 @@ export default class App extends React.Component {
         <ClippPlayer
           className={''}
           src={playinwitme}
+          initialDuration={192}
           btnStyle={{
             color: '#FFF',
             background: 'rgb(129, 116, 239)',
@@ -22,12 +23,13 @@ export default class App extends React.Component {
             color: 'rgb(129, 116, 239)',
           }}
           volume={1}
-          zoom={1}
+          zoom={.1}
           options={{
             audioRate: 1,
             autoCenter: true,
             barGap: 1,
             barWidth: 3,
+            barHeight: 5,
             cursorColor: '#FFF',
             cursorWidth: 1,
             fillParent: true,
