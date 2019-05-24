@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/clipp-player/static/js/runtime~main.71e00549.js"
   },
   {
-    "revision": "69c5986d41a75a58baeb",
-    "url": "/clipp-player/static/js/main.c619818f.chunk.js"
+    "revision": "d716a2e16ff70331b48c",
+    "url": "/clipp-player/static/js/main.4100b643.chunk.js"
   },
   {
     "revision": "3af0475e13d54c83156c",
     "url": "/clipp-player/static/js/2.10130865.chunk.js"
   },
   {
-    "revision": "69c5986d41a75a58baeb",
+    "revision": "d716a2e16ff70331b48c",
     "url": "/clipp-player/static/css/main.73131e54.chunk.css"
   },
   {
-    "revision": "b38aa18ed078d4c4a555152ecccb00d1",
+    "revision": "742a5004f237ea629a105229b56dded6",
     "url": "/clipp-player/index.html"
   }
 ];
