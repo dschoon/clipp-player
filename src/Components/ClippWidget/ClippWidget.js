@@ -27,7 +27,7 @@ export default class ClippWidget extends React.Component {
   updateTimer = (currentTime, wavesurfer={}) => {
     const totalDuration = wavesurfer.getDuration();
 
-    if (currentTime && Number.isInteger(currentTime)) {
+    if (currentTime && !isNaN(currentTime)) {
       this.setState({ time: currentTime, duration: totalDuration });
     }
   };
@@ -80,7 +80,7 @@ export default class ClippWidget extends React.Component {
               normalize: options.normalize,
               partialRender: options.partialRender,
               progressColor: options.progressColor,
-              responsive: options.responsive,
+              responsive: options.responsive || true,
               waveColor: options.waveColor
             }}
             volume={volume}
