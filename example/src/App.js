@@ -3,12 +3,26 @@ import ClippPlayer from 'clipp-player'
 import playinwitme from './audio/playinwitme.mp3';
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isPlaying: false
+    }
+  }
+
+  togglePlay = () => {
+    this.setState({ isPlaying: !this.state.isPlaying })
+  };
+
   render () {
     return (
       <div className={'container'}>
         <ClippPlayer
           className={''}
           src={playinwitme}
+          isPlaying={this.state.isPlaying}
+          togglePlay={this.togglePlay}
           initialDuration={192}
           btnStyle={{
             color: '#FFF',

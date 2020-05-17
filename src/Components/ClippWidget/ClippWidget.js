@@ -14,14 +14,18 @@ export default class ClippWidget extends React.Component {
     super(props);
 
     this.state = {
-      isPlaying: false,
+      isPlaying: props.isPlaying,
       time: 0,
-      duration: this.props.initialDuration || 0,
+      duration: props.initialDuration || 0,
     };
   }
 
   togglePlay = () => {
-    this.setState({ isPlaying: !this.state.isPlaying });
+    if (this.props.togglePlay) {
+      this.props.togglePlay();
+    } else {
+      this.setState({ isPlaying: !this.state.isPlaying });
+    }
   };
 
   updateTimer = (currentTime, wavesurfer={}) => {
@@ -49,13 +53,17 @@ export default class ClippWidget extends React.Component {
     return moment(currentTime.asMilliseconds()).format('mm:ss');
   };
 
+  getIsPlaying = () => {
+    return !!this.props.isPlaying || !!this.state.isPlaying;
+  };
+
   render() {
     const { src, audioPeaks, volume, zoom, options, btnStyle, counterStyle } = this.props;
 
     return (
       <div>
         <div className={ styles.button } onClick={ this.togglePlay } style={ btnStyle } >
-          { this.state.isPlaying ?
+          { this.getIsPlaying() ?
             <FontAwesomeIcon icon={faPause}  /> :
             <FontAwesomeIcon icon={faPlay} className={ styles.play } />
           }
@@ -85,7 +93,7 @@ export default class ClippWidget extends React.Component {
             }}
             volume={volume}
             zoom={zoom}
-            playing={this.state.isPlaying}
+            playing={this.getIsPlaying()}
             onPosChange={this.updateTimer}
           />
         </div>
@@ -100,6 +108,8 @@ export default class ClippWidget extends React.Component {
 ClippWidget.propTypes = {
   className: PropTypes.string,
   src: PropTypes.string,
+  isPlaying: PropTypes.bool,
+  togglePlay: PropTypes.func,
   audioPeaks: PropTypes.array,
   countStyle: PropTypes.oneOf(['DOWN', 'UP']),
   btnStyle: PropTypes.shape({

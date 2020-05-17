@@ -1,15 +1,15 @@
 {
   "name": "clipp-player-example",
   "homepage": "https://dschoon.github.io/clipp-player",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "clipp-player": "link:..",
     "prop-types": "^15.6.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "^3.2.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
