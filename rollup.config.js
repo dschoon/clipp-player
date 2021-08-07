@@ -1,12 +1,14 @@
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
-import external from 'rollup-plugin-peer-deps-external';
-import postcss from 'rollup-plugin-postcss';
+import image from '@rollup/plugin-image';
+import autoExternal from 'rollup-plugin-auto-external';
 import resolve from 'rollup-plugin-node-resolve';
+import postcss from 'rollup-plugin-postcss';
 import url from 'rollup-plugin-url';
-import svgr from '@svgr/rollup';
+import { terser } from 'rollup-plugin-terser';
 
 import pkg from './package.json';
+
 export default {
   input: 'src/index.js',
   output: [
@@ -22,17 +24,26 @@ export default {
     }
   ],
   plugins: [
-    external(),
     postcss({
-      modules: true
+      modules: true,
     }),
+    image(),
+    autoExternal(),
     url(),
-    svgr(),
     babel({
-      exclude: 'node_modules/**',
-      plugins: [ 'external-helpers' ]
+      exclude: /node_modules/,
+      presets: ['@babel/preset-typescript', '@babel/preset-react', '@babel/preset-env'],
     }),
-    resolve(),
-    commonjs()
+    resolve({
+      main: true,
+    }),
+    commonjs({
+      include: [
+        'node_modules',
+        'node_modules/**',
+        'node_modules/**/*',
+      ],
+    }),
+    terser(),
   ]
 }

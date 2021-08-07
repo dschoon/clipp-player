@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import ReactWaves from '@dschoon/react-waves';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
+import pause from '../../assets/pause.png';
+import play from '../../assets/play.png';
 
 import styles from '../../styles.scss';
 
@@ -64,8 +64,8 @@ export default class ClippWidget extends React.Component {
       <div>
         <div className={ styles.button } onClick={ this.togglePlay } style={ btnStyle } >
           { this.getIsPlaying() ?
-            <FontAwesomeIcon icon={faPause}  /> :
-            <FontAwesomeIcon icon={faPlay} className={ styles.play } />
+            <img src={pause} alt='pause'  /> :
+            <img src={play} className={ styles.play } alt='play' />
           }
         </div>
         <div className={styles.inner}>
