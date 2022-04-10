@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/clipp-player/static/css/main.2895f18f.chunk.css",
-    "main.js": "/clipp-player/static/js/main.ad17d7f6.chunk.js",
-    "main.js.map": "/clipp-player/static/js/main.ad17d7f6.chunk.js.map",
+    "main.js": "/clipp-player/static/js/main.99d2ebbe.chunk.js",
+    "main.js.map": "/clipp-player/static/js/main.99d2ebbe.chunk.js.map",
     "runtime-main.js": "/clipp-player/static/js/runtime-main.0f515ca4.js",
     "runtime-main.js.map": "/clipp-player/static/js/runtime-main.0f515ca4.js.map",
     "static/js/2.56094898.chunk.js": "/clipp-player/static/js/2.56094898.chunk.js",
     "static/js/2.56094898.chunk.js.map": "/clipp-player/static/js/2.56094898.chunk.js.map",
     "index.html": "/clipp-player/index.html",
-    "precache-manifest.ae72f8b5b09af875d230c1163bd517d8.js": "/clipp-player/precache-manifest.ae72f8b5b09af875d230c1163bd517d8.js",
+    "precache-manifest.b35e6f227bd8595912486caa6f32dec6.js": "/clipp-player/precache-manifest.b35e6f227bd8595912486caa6f32dec6.js",
     "service-worker.js": "/clipp-player/service-worker.js",
     "static/css/main.2895f18f.chunk.css.map": "/clipp-player/static/css/main.2895f18f.chunk.css.map",
     "static/js/2.56094898.chunk.js.LICENSE.txt": "/clipp-player/static/js/2.56094898.chunk.js.LICENSE.txt",
-    "static/js/main.ad17d7f6.chunk.js.LICENSE.txt": "/clipp-player/static/js/main.ad17d7f6.chunk.js.LICENSE.txt",
+    "static/js/main.99d2ebbe.chunk.js.LICENSE.txt": "/clipp-player/static/js/main.99d2ebbe.chunk.js.LICENSE.txt",
     "static/media/playinwitme.mp3": "/clipp-player/static/media/playinwitme.271d4cb6.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.0f515ca4.js",
     "static/js/2.56094898.chunk.js",
     "static/css/main.2895f18f.chunk.css",
-    "static/js/main.ad17d7f6.chunk.js"
+    "static/js/main.99d2ebbe.chunk.js"
   ]
 }
