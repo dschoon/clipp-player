@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ef6509cd83bde5ca589437c862f5a48b",
+    "revision": "55fa9df45cd8c38b14086dab3e8caf1c",
     "url": "/clipp-player/index.html"
   },
   {
-    "revision": "cbfb42107662abc8c74c",
+    "revision": "61158f248814629bcea1",
     "url": "/clipp-player/static/css/main.2895f18f.chunk.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clipp-player/static/js/2.56094898.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cbfb42107662abc8c74c",
-    "url": "/clipp-player/static/js/main.99d2ebbe.chunk.js"
+    "revision": "61158f248814629bcea1",
+    "url": "/clipp-player/static/js/main.32cbd7d0.chunk.js"
   },
   {
     "revision": "7590ca6be406901011134c72895e09b7",
-    "url": "/clipp-player/static/js/main.99d2ebbe.chunk.js.LICENSE.txt"
+    "url": "/clipp-player/static/js/main.32cbd7d0.chunk.js.LICENSE.txt"
   },
   {
     "revision": "a51762e8d80f2d476f39",

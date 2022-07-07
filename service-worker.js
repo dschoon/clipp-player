@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/clipp-player/precache-manifest.b35e6f227bd8595912486caa6f32dec6.js"
+  "/clipp-player/precache-manifest.0e0b42dca72539a9ccd2056495740dab.js"
 );
 
 self.addEventListener('message', (event) => {
